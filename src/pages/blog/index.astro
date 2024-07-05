@@ -20,10 +20,10 @@ const currentPosts = sortedPosts.slice(0, pageSize);
 <nav aria-label="Pagination">
   <ul class="pagination">
     <li class={currentPage === 1 ? 'disabled' : ''}>
-      <a href={currentPage > 1 ? `/blog/${currentPage - 1}` : '#'}>«</a>
+      <a href={currentPage > 1 ? `/astro-fast-fontend-2.github.io/blog/${currentPage - 1}` : '#'}>«</a>
     </li>
     <li>
-      <a href="/blog/1" class={currentPage === 1 ? 'active' : ''}>1</a>
+      <a href="/astro-fast-fontend-2.github.io/blog/1" class={currentPage === 1 ? 'active' : ''}>1</a>
     </li>
     {currentPage > 3 && <li><span>…</span></li>}
     {Array.from({ length: totalPages }, (_, i) => i + 1)
@@ -31,15 +31,15 @@ const currentPosts = sortedPosts.slice(0, pageSize);
       .slice(currentPage > 3 ? currentPage - 2 : 0, currentPage + 1)
       .map(page => (
         <li>
-          <a href={`/blog/${page}`} class={currentPage === page ? 'active' : ''}>{page}</a>
+          <a href={`/astro-fast-fontend-2.github.io/blog/${page}`} class={currentPage === page ? 'active' : ''}>{page}</a>
         </li>
       ))}
     {currentPage < totalPages - 2 && <li><span>…</span></li>}
     <li>
-      <a href={`/blog/${totalPages}`} class={currentPage === totalPages ? 'active' : ''}>{totalPages}</a>
+      <a href={`/astro-fast-fontend-2.github.io/blog/${totalPages}`} class={currentPage === totalPages ? 'active' : ''}>{totalPages}</a>
     </li>
     <li class={currentPage === totalPages ? 'disabled' : ''}>
-      <a href={currentPage < totalPages ? `/blog/${currentPage + 1}` : '#'}>»</a>
+      <a href={currentPage < totalPages ? `/astro-fast-fontend-2.github.io/blog/${currentPage + 1}` : '#'}>»</a>
     </li>
   </ul>
 </nav>
